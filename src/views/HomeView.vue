@@ -1,6 +1,12 @@
 <template>
-  <v-navigation-drawer v-model="drawer" location="right"> </v-navigation-drawer>
-  <v-icon size="60" color="blue-lighten-1" @click="drawer = !drawer" class="drawer">mdi-menu</v-icon>
+  <v-navigation-drawer temporary v-model="drawer" location="right" color="blue-lighten-1">
+    <v-list>
+      <span>sui828's portfolio!</span>
+      <v-list-item prepend-icon="mdi-account" title="Profile" value="profile" />
+      <v-list-item prepend-icon="mdi-application" title="Works" value="works" />
+    </v-list>
+  </v-navigation-drawer>
+  <v-icon color="blue-lighten-1" @click="drawer = !drawer" class="drawer">mdi-menu</v-icon>
   <div class="top">
     <div class="top-icon">
       <v-img
@@ -70,7 +76,7 @@
             i.title
           }}</v-card-title>
           <v-row class="mb-6">
-            <v-col cols="6">
+            <v-col cols="12" sm="6" md="6" lg="6" xl="6">
               <v-btn
                 color="blue-lighten-1"
                 variant="flat"
@@ -80,7 +86,7 @@
                 >サイトへ</v-btn
               >
             </v-col>
-            <v-col cols="6">
+            <v-col cols="12" sm="6" md="6" lg="6" xl="6">
               <v-btn
                 color="blue-lighten-1"
                 variant="flat"

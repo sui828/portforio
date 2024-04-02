@@ -1,6 +1,6 @@
 <template>
   <div class="story">
-    <v-app-bar flat color="blue-lighten-1">
+    <v-app-bar elevation="1" color="blue-lighten-1">
       <v-app-bar-title>sui828's portfolio!</v-app-bar-title>
       <v-spacer></v-spacer>
       <router-link to="/">
