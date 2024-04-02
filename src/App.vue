@@ -11,24 +11,23 @@ export default {
   name: "App",
 
   data: () => ({
-    ramune: "top",
-    page: "",
+    path: "top",
+    path_old: "",
   }),
 
   methods: {
     setRamune() {
-      this.ramune = this.$route.name;
+      this.path = this.$route.name;
     },
   },
 
   watch: {
-    // Pathの変化: Page移動を監視する
     $route(newRoute, oldRoute) {
       const topPath = newRoute.name;
       const oldPath = oldRoute.name;
-      this.ramune = topPath;
-      console.log(this.ramune);
-      this.page = oldPath;
+      this.path = topPath;
+      console.log(this.path);
+      this.path_old = oldPath;
     },
   },
 };

@@ -1,4 +1,6 @@
 <template>
+  <v-navigation-drawer v-model="drawer" location="right"> </v-navigation-drawer>
+  <v-icon size="60" color="blue-lighten-1" @click="drawer = !drawer" class="drawer">mdi-menu</v-icon>
   <div class="top">
     <div class="top-icon">
       <v-img
@@ -93,7 +95,7 @@
     </v-row>
   </div>
   <v-footer class="bg-blue-lighten-1">
-    <v-col class="text-center mt-6" cols="12">
+    <v-col class="text-center my-6" cols="12">
       {{ new Date().getFullYear() }} — sui828
     </v-col>
   </v-footer>
@@ -102,8 +104,10 @@
 <script>
 export default {
   name: "HomeView",
-  data: function() {
+  data: function () {
     return {
+      drawer: false,
+      page: "",
       works: [
         {
           id: "micomprocedure",
@@ -147,6 +151,22 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    QueryIs: function(){
+      if(this.$route.query.p === undefined){
+        this.page = "/"
+      }else{
+        this.page = "/" + this.$route.query.p
+      }
+      console.log(this.page);
+      if(this.page !== "/"){
+        this.$router.push(this.page)
+      }
+    },
+  },
+  mounted(){
+    this.QueryIs();
   },
 };
 </script>
