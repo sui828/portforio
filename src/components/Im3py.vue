@@ -1,6 +1,6 @@
 <template>
   <div class="story-top">
-    <h3>生成物置き場</h3>
+    <h3 style="font-family: 'BIZ UDPGothic', sans-serif;">生成物置き場</h3>
     <v-img
       src="../assets/im3py/im3py_top.webp"
       alt="サイトサムネ画像"
@@ -24,22 +24,26 @@
       <v-col cols="12">
         <h5>デザインに特化する</h5>
       </v-col>
-      <v-col cols="6" class="px-6">
-        <v-img alt="wikiトップ"></v-img>
-      </v-col>
-      <v-col cols="6" class="px-6">
-        <p>
-          大学に入ってから、創作系のサークルに複数入って各所で創作活動をしています。作品をまとめておく場所が欲しかったので今できることを使って制作してみました。<br>自分だけが見られれば良いというモチベーションの下で、使い勝手や視認性より見栄えの良さに力を注ぎたく思いデザインしました。
-        </p>
-      </v-col>
-      <v-col cols="6" class="px-6">
-        <p>
-          星とラムネのモチーフが好きなので、それらを星座に見立てて配置しました。星座の画像はSVG形式で制作しています。また作品をジャンルごとに分け、各ページのボタンを星として置きました。
-        </p>
-      </v-col>
-      <v-col cols="6" class="px-6">
-        <v-img alt="wikiトップ"></v-img>
-      </v-col>
+      <div class="d-sm-flex">
+        <v-col cols="6" class="px-6">
+          <v-img alt="wikiトップ"></v-img>
+        </v-col>
+        <v-col cols="6" class="px-6">
+          <p>
+            大学に入ってから、創作系のサークルに複数入って各所で創作活動をしています。作品をまとめておく場所が欲しかったので今できることを使って制作してみました。<br />自分だけが見られれば良いというモチベーションの下で、使い勝手や視認性より見栄えの良さに力を注ぎたく思いデザインしました。
+          </p>
+        </v-col>
+      </div>
+      <div class="d-sm-flex flex-row-reverse">
+        <v-col cols="6" class="px-6">
+          <v-img alt="wikiトップ"></v-img>
+        </v-col>
+        <v-col cols="6" class="px-6">
+          <p>
+            星とラムネのモチーフが好きなので、それらを星座に見立てて配置しました。星座の画像はSVG形式で制作しています。また作品をジャンルごとに分け、各ページのボタンを星として置きました。
+          </p>
+        </v-col>
+      </div>
     </v-row>
   </div>
 </template>

@@ -24,22 +24,26 @@
       <v-col cols="12">
         <h5>作品第一</h5>
       </v-col>
-      <v-col cols="6" class="px-6">
-        <v-img alt="wikiトップ"></v-img>
-      </v-col>
-      <v-col cols="6" class="px-6">
-        <p>
-          相生あおはさんからホームページの改修を依頼されたので制作しました。あおはさんは～(紹介文)。そこで、ページを開いた際に活動内容がすぐ見えるようにカルーセルを配置しました。
-        </p>
-      </v-col>
-      <v-col cols="6" class="px-6">
-        <p>
-          元々自前でホームページを制作なさっていたこともあって、以前のデザインを踏襲しつつモダンなデザインにすることも課題でした。
-        </p>
-      </v-col>
-      <v-col cols="6" class="px-6">
-        <v-img alt="wikiトップ"></v-img>
-      </v-col>
+      <div class="d-sm-flex">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-6">
+          <v-img alt="wikiトップ"></v-img>
+        </v-col>
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-6">
+          <p>
+            相生あおはさんからホームページの改修を依頼されたので制作しました。あおはさんは～(紹介文)。そこで、ページを開いた際に活動内容がすぐ見えるようにカルーセルを配置しました。
+          </p>
+        </v-col>
+      </div>
+      <div class="d-sm-flex flex-row-reverse">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-6">
+          <v-img alt="wikiトップ"></v-img>
+        </v-col>
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-6">
+          <p>
+            元々自前でホームページを制作なさっていたこともあって、以前のデザインを踏襲しつつモダンなデザインにすることも課題でした。
+          </p>
+        </v-col>
+      </div>
     </v-row>
   </div>
 </template>

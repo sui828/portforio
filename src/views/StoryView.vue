@@ -1,10 +1,10 @@
 <template>
   <div class="story">
     <v-app-bar elevation="1" color="blue-lighten-1">
-      <v-app-bar-title>sui828's portfolio!</v-app-bar-title>
+      <v-app-bar-title class="ml-8">Sui828's portfolio!</v-app-bar-title>
       <v-spacer></v-spacer>
       <router-link to="/">
-        <v-icon size="large" class="mr-4">mdi-home</v-icon>
+        <v-icon size="large" class="mr-6">mdi-home</v-icon>
       </router-link>
     </v-app-bar>
     <micomprocedure v-if="path == '/micomprocedure'" />

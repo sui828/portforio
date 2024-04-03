@@ -11,26 +11,35 @@ a {
 }
 h1 {
   color: white;
-  font-size: 2.5em;
+  font-size: 3em;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 1px;
 }
 h2 {
-  font-size: 1.8em;
+  font-size: 2.2em;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 1px;
 }
 h2::first-letter {
   color: #42A5F5;
 }
 h3 {
   color: white;
-  font-size: 2.5em;
+  font-size: 3em;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 1px;
 }
 h4 {
-  font-size: 2em;
+  font-size: 2.5em;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 1px;
 }
 h4::first-letter {
   color: #42A5F5;
 }
 h5 {
   font-size: 1.8em;
+  margin-bottom: 40px;
 }
 p {
   font-size: 1.2em;
@@ -45,12 +54,38 @@ p {
   height: 60px !important;
   font-size: 60px !important;
 }
+.nav-title {
+  font-size: 28px;
+  margin: 10px auto 20px;
+  text-align: center;
+  font-family: "Scada", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.v-navigation-drawer .v-divider {
+  margin-bottom: 20px;
+}
+.v-footer .v-col {
+  font-size: 24px;
+  font-family: "Scada", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .top {
-  height: 100vh;
-  background-color: white;
+  height: calc(100vh * (1 + tan(3deg)));
+  transform: skewY(3deg);
+  margin-top: calc(-100vh * tan(3deg));
+  margin-bottom: calc(-100vh * tan(3deg));
+}
+.top-mask {
+  height: 100%;
+  background-image: url(./BG.webp);
+  background-position: center;
+  background-size: cover;
+  transform: skewY(-3deg);
 }
 .top-icon {
-  width: 30%;
+  width: 90%;
   position: relative;
   top: 45%;
   left: 50%;
@@ -62,6 +97,8 @@ p {
   align-items: center;
 }
 .top .v-img {
+  max-width: 200px;
+  min-width: 100px;
   border-radius: 50%;
 }
 .arrow {
@@ -94,12 +131,14 @@ p {
 .name-box{
   margin-top: 40px;
   position:relative;
-  width: 100%;
+  width: fit-content;
   font-size: 28px;
-  height: 4rem;
   line-height: 3rem;
   background: #FFFFFF;
-  padding: 5px;
+  font-family: "Scada", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 15px;
   text-align: center;
   border: 4px solid #BBDEFB;
   color: #666666;
@@ -171,12 +210,20 @@ p {
   max-height: none;
 }
 .works {
-  padding: 80px 0 100px;
+  padding: 200px 0 150px;
+  margin-top: calc(-100vh * tan(3deg));
+  background: linear-gradient(115deg, transparent 74%, #E2F0FC 74%),linear-gradient(120deg, transparent 72.5%, #BBDEFB 72.5%);
 }
 .works .v-row{
   width: 90%;
   max-width: 1152px;
   margin: auto;
+}
+.works .v-card {
+  background: white;
+}
+.story .app-bar-title {
+  font-family: "Scada", sans-serif;
 }
 .story-top {
   background-color: #42A5F5;
@@ -191,6 +238,7 @@ p {
 }
 .story .bg-white {
   color: #42A5F5 !important;
+  font-size: 1em;
 }
 .story-main {
   padding: 100px 0;
@@ -215,8 +263,6 @@ p {
   align-items: center;
   padding: 50px 0;
 }
-
-
 .not-found {
   height: 100vh;
   background: linear-gradient(225deg, transparent 72%, #E2F0FC 72%),linear-gradient(230deg, transparent 72.5%, #BBDEFB 72.5%);
@@ -228,4 +274,15 @@ p {
 }
 .not-found h1 {
   color: #42A5F5;
+}
+
+
+@media screen and (max-width: 600px) {
+  .drawer {
+    top: 25px;
+    right: 25px;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 30px !important;
+  }
 }

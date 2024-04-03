@@ -9,7 +9,7 @@ export async function loadFonts () {
 
   webFontLoader.load({
     google: {
-      families: ['BIZ+UDPGothic:400,700&display=swap'],
+      families: ['BIZ+UDPGothic:400,700', 'Scada:400'],
     },
   })
 }
