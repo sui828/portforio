@@ -5,21 +5,36 @@
     location="right"
     color="blue-lighten-1"
   >
-    <v-list>
-      <div class="nav-title">Sui828's portfolio!</div>
-      <v-divider />
-      <v-list-item
-        prepend-icon="mdi-account"
-        title="About"
-        value="about"
-        @click="scroll(this.AboutY)"
-      />
-      <v-list-item
-        prepend-icon="mdi-application"
-        title="Works"
-        value="works"
-        @click="scroll(this.WorksY)"
-      />
+    <v-list class="d-flex flex-column justify-space-between">
+      <div>
+        <div class="nav-title">Sui828's portfolio!</div>
+        <v-divider />
+        <v-list-item
+          prepend-icon="mdi-format-vertical-align-top"
+          title="Top"
+          value="top"
+          @click="scroll(0)"
+        />
+        <v-list-item
+          prepend-icon="mdi-account"
+          title="About"
+          value="about"
+          @click="scroll(this.AboutY)"
+        />
+        <v-list-item
+          prepend-icon="mdi-application"
+          title="Works"
+          value="works"
+          @click="scroll(this.WorksY)"
+        />
+      </div>
+      <v-btn
+        flat
+        color="blue-lighten-1"
+        icon="mdi-chevron-double-right"
+        @click="drawer = !drawer"
+        class="ml-1 mb-4 me-auto"
+      ></v-btn>
     </v-list>
   </v-navigation-drawer>
   <v-icon color="blue-lighten-1" @click="drawer = !drawer" class="drawer"
@@ -197,13 +212,8 @@ export default {
       WorksY: 0,
     };
   },
-  mounted() {
-    this.QueryIs();
-    this.RectIs();
-    window.addEventListener("resize", this.RectIs);
-  },
   methods: {
-    QueryIs() {
+    QueryIs: function() {
       if (this.$route.query.p === undefined) {
         this.page = "/";
       } else {
@@ -214,7 +224,7 @@ export default {
         this.$router.push(this.page);
       }
     },
-    RectIs() {
+    RectIs: function() {
       this.AboutRect = this.$refs.about.getBoundingClientRect();
       this.WorksRect = this.$refs.works.getBoundingClientRect();
       this.AboutY = this.AboutRect.top + window.pageYOffset;
@@ -224,6 +234,13 @@ export default {
     scroll(Y) {
       scrollTo({ top: Y, behavior: "smooth" });
     },
+  },
+  mounted() {
+    this.QueryIs();
+    this.RectIs();
+  },
+  updated() {
+    window.addEventListener("resize", this.RectIs);
   },
 };
 </script>
