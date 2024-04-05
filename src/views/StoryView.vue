@@ -1,11 +1,8 @@
 <template>
   <div class="story">
     <v-app-bar elevation="1" color="blue-lighten-1">
-      <v-app-bar-title class="ml-8">Sui828's portfolio!</v-app-bar-title>
-      <v-spacer></v-spacer>
-      <router-link to="/">
-        <v-icon size="large" class="mr-6">mdi-home</v-icon>
-      </router-link>
+      <v-app-bar-title class="ml-8"><router-link to="/">Sui828's portfolio!</router-link></v-app-bar-title>
+      <v-spacer />
     </v-app-bar>
     <micomprocedure v-if="path == '/micomprocedure'" />
     <semicolon0103 v-if="path == '/semicolon0103'" />

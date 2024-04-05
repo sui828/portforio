@@ -54,25 +54,31 @@
         <h4>Concept</h4>
       </v-col>
       <v-col cols="12">
-        <h5>デザインに特化する</h5>
+        <h5>見栄えに特化する</h5>
       </v-col>
       <div class="d-sm-flex">
-        <v-col cols="6" class="px-6">
-          <v-img alt="wikiトップ"></v-img>
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
+          <v-img
+            src="../assets/im3py/im3py_1.webp"
+            alt="wikiトップ"
+          />
         </v-col>
-        <v-col cols="6" class="px-6">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
           <p>
-            大学に入ってから、創作系のサークルに複数入って各所で創作活動をしています。作品をまとめておく場所が欲しかったので今できることを使って制作してみました。<br />自分だけが見られれば良いというモチベーションの下で、使い勝手や視認性より見栄えの良さに力を注ぎたく思いデザインしました。
+            大学に入ってから、創作系のサークルに複数入って各所で創作活動をしています。作品をまとめておく場所が欲しかったので今できることを使って制作してみました。自分だけが見ることができれば良いというモチベーションの下で、使い勝手や視認性より見栄えの良さに力を注ぎたく思いデザインしました。
           </p>
         </v-col>
       </div>
       <div class="d-sm-flex flex-row-reverse">
-        <v-col cols="6" class="px-6">
-          <v-img alt="wikiトップ"></v-img>
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
+          <v-img
+            src="../assets/im3py/im3py_2.webp"
+            alt="作品ページ"
+          />
         </v-col>
-        <v-col cols="6" class="px-6">
-          <p>
-            星とラムネのモチーフが好きなので、それらを星座に見立てて配置しました。星座の画像はSVG形式で制作しています。また作品をジャンルごとに分け、各ページのボタンを星として置きました。
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
+          <p class="pb-12">
+            スマートフォンでは右上の星座マークボタンから各ページに飛べるようにしました。星座の画像に合わせてボタンの位置を細かく調整しています。
           </p>
         </v-col>
       </div>
@@ -82,7 +88,6 @@
 
 <script>
 export default {
-  name: "MicomprocedureView",
-  data: () => ({}),
+  name: "Im3pyView",
 };
 </script>
