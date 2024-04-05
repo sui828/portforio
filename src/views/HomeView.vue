@@ -111,7 +111,7 @@
           <v-card-title class="mx-3 text-blue-lighten-1 pt-5">{{
             i.title
           }}</v-card-title>
-          <v-row class="mb-6" v-if="i.github == ''">
+          <v-row class="mb-6">
             <v-col
               cols="12"
               sm="6"
@@ -137,43 +137,7 @@
               lg="6"
               xl="6"
               class="d-flex justify-center"
-            >
-              <v-btn
-                color="blue-lighten-1"
-                variant="flat"
-                prepend-icon="mdi-menu-right"
-                :to="i.id"
-                width="120"
-                >制作小話</v-btn
-              >
-            </v-col>
-          </v-row>
-          <v-row class="mb-6" v-else>
-            <v-col
-              cols="12"
-              sm="6"
-              md="6"
-              lg="6"
-              xl="4"
-              class="d-flex justify-center"
-            >
-              <v-btn
-                color="blue-lighten-1"
-                variant="flat"
-                prepend-icon="mdi-menu-right"
-                :href="i.to"
-                target="_blank"
-                width="120"
-                >サイトへ</v-btn
-              >
-            </v-col>
-            <v-col
-              cols="12"
-              sm="6"
-              md="6"
-              lg="6"
-              xl="4"
-              class="d-flex justify-center"
+              v-if="i.github != ''"
             >
               <v-btn
                 color="blue-lighten-1"
@@ -190,7 +154,7 @@
               sm="6"
               md="6"
               lg="6"
-              xl="4"
+              xl="6"
               class="d-flex justify-center"
             >
               <v-btn
