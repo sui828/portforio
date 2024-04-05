@@ -28,7 +28,8 @@
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
           <v-img
             src="../assets/semicolon0103/aoha_1.webp"
-            alt="wikiトップ"
+            alt="ブログトップ"
+            width="100%"
           />
         </v-col>
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
@@ -41,7 +42,8 @@
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
           <v-img
             src="../assets/semicolon0103/aoha_2.webp"
-            alt="作品ページ"
+            alt="曲紹介ページ"
+            width="100%"
           />
         </v-col>
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">

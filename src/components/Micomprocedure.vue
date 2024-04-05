@@ -29,6 +29,7 @@
           <v-img
             src="../assets/micomprocedure/proc_1.webp"
             alt="wikiトップ"
+            width="100%"
           />
         </v-col>
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
@@ -42,6 +43,7 @@
           <v-img
             src="../assets/micomprocedure/proc_2.webp"
             alt="作品ページ"
+            width="100%"
           />
         </v-col>
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">

@@ -60,7 +60,8 @@
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
           <v-img
             src="../assets/im3py/im3py_1.webp"
-            alt="wikiトップ"
+            alt="Musicページ"
+            width="100%"
           />
         </v-col>
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
@@ -73,7 +74,8 @@
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
           <v-img
             src="../assets/im3py/im3py_2.webp"
-            alt="作品ページ"
+            alt="スマホ版メニュー表示"
+            width="100%"
           />
         </v-col>
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">

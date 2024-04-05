@@ -28,7 +28,8 @@
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
           <v-img
             src="../assets/portfolio/portfolio_top.webp"
-            alt="wikiトップ"
+            alt="トップ画面"
+            width="100%"
           />
         </v-col>
         <v-col cols="12" sm="6" md="6" lg="6" xl="6" class="px-4 py-8 d-flex align-center">
