@@ -44,7 +44,7 @@
     <div class="top-mask">
       <div class="top-icon">
         <v-img
-          src="../assets/icon.webp"
+          src="@/assets/icon.webp"
           alt="sui828's icon"
           width="20%"
           aspect-ratio="1"
@@ -96,7 +96,7 @@
     <v-row>
       <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="i in works" :key="i">
         <v-card variant="outlined" color="blue-lighten-4">
-          <v-img :src="i.src" class="mb-4"></v-img>
+          <v-img :src="i.src" width="100%" aspect-ratio="1" class="mb-4"></v-img>
           <v-card-subtitle class="d-flex">
             <v-chip
               v-for="c in i.tag"
@@ -111,7 +111,7 @@
           <v-card-title class="mx-3 text-blue-lighten-1 pt-5">{{
             i.title
           }}</v-card-title>
-          <v-row class="mb-6">
+          <v-row class="mb-6" v-if="i.github == ''">
             <v-col
               cols="12"
               sm="6"
@@ -126,6 +126,7 @@
                 prepend-icon="mdi-menu-right"
                 :href="i.to"
                 target="_blank"
+                width="120"
                 >サイトへ</v-btn
               >
             </v-col>
@@ -142,6 +143,62 @@
                 variant="flat"
                 prepend-icon="mdi-menu-right"
                 :to="i.id"
+                width="120"
+                >制作小話</v-btn
+              >
+            </v-col>
+          </v-row>
+          <v-row class="mb-6" v-else>
+            <v-col
+              cols="12"
+              sm="6"
+              md="6"
+              lg="4"
+              xl="4"
+              class="d-flex justify-center"
+            >
+              <v-btn
+                color="blue-lighten-1"
+                variant="flat"
+                prepend-icon="mdi-menu-right"
+                :href="i.to"
+                target="_blank"
+                width="120"
+                >サイトへ</v-btn
+              >
+            </v-col>
+            <v-col
+              cols="12"
+              sm="6"
+              md="6"
+              lg="4"
+              xl="4"
+              class="d-flex justify-center"
+            >
+              <v-btn
+                color="blue-lighten-1"
+                variant="flat"
+                prepend-icon="mdi-menu-right"
+                :href="i.github"
+                target="_blank"
+                width="120"
+                >GitHub</v-btn
+              >
+            </v-col>
+            <v-col
+              cols="12"
+              sm="6"
+              md="6"
+              lg="4"
+              xl="4"
+              class="d-flex justify-center"
+            >
+              <v-btn
+                color="blue-lighten-1"
+                variant="flat"
+                prepend-icon="mdi-menu-right"
+                :to="i.id"
+                width="120"
                 >制作小話</v-btn
               >
             </v-col>
@@ -167,8 +224,9 @@ export default {
       works: [
         {
           id: "micomprocedure",
-          src: require("../assets/micomprocedure/proc_ico.webp"),
+          src: require("@/assets/micomprocedure/proc_ico.webp"),
           to: "https://micomprocedure.com/",
+          github: "",
           title: "Micomprocedure",
           tag: [
             { icon: "mdi-vuejs", text: "Vue 2", color: "#3c4f64" },
@@ -177,8 +235,9 @@ export default {
         },
         {
           id: "semicolon0103",
-          src: require("../assets/semicolon0103/aoha_icon.webp"),
+          src: require("@/assets/semicolon0103/aoha_icon.webp"),
           to: "https://semicolon0103.com/",
+          github: "",
           title: "Aioi Aoha's Workshop",
           tag: [
             { icon: "mdi-vuejs", text: "Vue 3", color: "#57bc85" },
@@ -187,8 +246,9 @@ export default {
         },
         {
           id: "im3py",
-          src: require("../assets/im3py/im3py_ico.webp"),
+          src: require("@/assets/im3py/im3py_ico.webp"),
           to: "https://sui828.github.io/",
+          github: "https://github.com/sui828/sui828.github.io",
           title: "生成物置き場",
           tag: [
             { icon: "mdi-vuejs", text: "Vue 3", color: "#57bc85" },
@@ -197,8 +257,9 @@ export default {
         },
         {
           id: "portfolio",
-          src: require("../assets/icon.webp"),
+          src: require("@/assets/icon.webp"),
           to: "https://sui828-portfolio.pages.dev/",
+          github: "https://github.com/sui828/portforio",
           title: "ポートフォリオ",
           tag: [
             { icon: "mdi-vuejs", text: "Vue 3", color: "#57bc85" },
@@ -213,7 +274,7 @@ export default {
     };
   },
   methods: {
-    QueryIs: function() {
+    QueryIs: function () {
       if (this.$route.query.p === undefined) {
         this.page = "/";
       } else {
@@ -224,7 +285,7 @@ export default {
         this.$router.push(this.page);
       }
     },
-    RectIs: function() {
+    RectIs: function () {
       this.AboutRect = this.$refs.about.getBoundingClientRect();
       this.WorksRect = this.$refs.works.getBoundingClientRect();
       this.AboutY = this.AboutRect.top + window.pageYOffset;

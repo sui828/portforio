@@ -7,6 +7,14 @@
       width="90%"
       max-width="1152"
     ></v-img>
+    <v-btn
+      color="white"
+      variant="flat"
+      prepend-icon="mdi-menu-right"
+      href="https://github.com/sui828/portforio"
+      target="_blank"
+      >GitHub</v-btn
+    >
   </div>
   <div class="story-main">
     <v-row>

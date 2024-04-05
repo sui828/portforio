@@ -227,6 +227,12 @@ p {
 .works .v-card {
   background: white;
 }
+.works .v-btn__prepend {
+  margin-inline: 0;
+}
+.works .v-btn span {
+  text-transform: none;
+}
 .story .app-bar-title {
   font-family: "Scada", sans-serif;
 }
@@ -244,6 +250,12 @@ p {
 .story .bg-white {
   color: #42A5F5 !important;
   font-size: 1em;
+}
+.story .v-btn__prepend {
+  margin-inline: 0;
+}
+.story .v-btn span {
+  text-transform: none;
 }
 .story-main {
   padding: 100px 0;

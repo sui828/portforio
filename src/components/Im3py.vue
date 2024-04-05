@@ -1,20 +1,52 @@
 <template>
   <div class="story-top">
-    <h3 style="font-family: 'BIZ UDPGothic', sans-serif;">生成物置き場</h3>
+    <h3 style="font-family: 'BIZ UDPGothic', sans-serif">生成物置き場</h3>
     <v-img
       src="../assets/im3py/im3py_top.webp"
       alt="サイトサムネ画像"
       width="90%"
       max-width="1152"
     ></v-img>
-    <v-btn
-      color="white"
-      variant="flat"
-      prepend-icon="mdi-menu-right"
-      href="https://sui828.github.io/"
-      target="_blank"
-      >サイトへ</v-btn
-    >
+    <v-row>
+      <v-col
+        cols="12"
+        sm="6"
+        md="6"
+        lg="6"
+        xl="6"
+        class="d-flex justify-center"
+      >
+        <v-btn
+          color="white"
+          variant="flat"
+          prepend-icon="mdi-menu-right"
+          href="https://sui828.github.io/"
+          target="_blank"
+          width="120"
+          class="mt-3"
+          >サイトへ</v-btn
+        >
+      </v-col>
+      <v-col
+        cols="12"
+        sm="6"
+        md="6"
+        lg="6"
+        xl="6"
+        class="d-flex justify-center"
+      >
+        <v-btn
+          color="white"
+          variant="flat"
+          prepend-icon="mdi-menu-right"
+          href="https://github.com/sui828/sui828.github.io"
+          target="_blank"
+          width="120"
+          class="mt-3"
+          >GitHub</v-btn
+        >
+      </v-col>
+    </v-row>
   </div>
   <div class="story-main">
     <v-row>
